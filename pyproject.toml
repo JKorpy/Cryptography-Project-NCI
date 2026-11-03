@@ -1,0 +1,20 @@
+# Print essential libraries (ignore pip) for the requriements.txt
+# pip list --not-required --format=freeze
+
+# In Terminal, access (venv) command line ".\venv\Scripts\Activate.ps1"
+# pip install -e .          Base Dependencies
+# pip install -e .[dev]     Base Dependencies & Optional
+# To leave (venv), enter "deactivate"  
+
+[project]
+name = "secure_app"
+version = "0.1"
+dependencies = [
+    "cryptography==50.0.2",
+    "pysqlite3==0.6.1",
+    "pyturso==0.8.3",
+    "customtkinter==6.0.0"
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1"]
