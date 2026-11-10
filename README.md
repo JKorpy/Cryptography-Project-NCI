@@ -15,5 +15,9 @@ pip install -e .[dev]
 deactivate
 ```
 
+## To Run
+
+1. Access the (venv) command line
+2. Execute "python secure_app/main.py
 
 # Resources:
