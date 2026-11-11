@@ -1,6 +1,11 @@
 # Linux: folder/
 # Windows: .folder/
 
+# Cryptography
+master.key
+.master.key
+
+
 # Python
 __pycache__/
 .__pycache__/
@@ -8,12 +13,12 @@ secure_app.egg-info/
 .secure_app.egg-info/
 
 # Virtual Environment
-.env
 .venv/
 venv/
 # IDE
 .vscode
 # Database
-.mydata.db
 mydata.db
+.mydata.db
+
 
