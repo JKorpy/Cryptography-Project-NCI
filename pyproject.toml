@@ -10,11 +10,15 @@
 name = "secure_app"
 version = "0.1"
 dependencies = [
-    "cryptography==50.0.2",
-    "pysqlite3==0.6.1",
-    "pyturso==0.8.3",
-    "customtkinter==6.0.0"
+    "cryptography",
+    "pysqlite3",
+    "customtkinter",
+    "argon2-cffi"
 ]
 
 [project.optional-dependencies]
-dev = ["pytest==9.1.1"]
+dev = ["pytest"]
+
+# Keep it empty
+[tool.setuptools]
+packages = []

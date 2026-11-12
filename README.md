@@ -1,5 +1,10 @@
 # Cryptography-Project-NCI
 
+# Disclaimer
+
+This is a third-year team project that is meant to achieve a robust cryptography software solution. This application is designed and produced to meet the brief's requirement. It is not recommended to use this code for any security purposes.
+
+
 # Setup
 
 ## Windows
@@ -15,5 +20,9 @@ pip install -e .[dev]
 deactivate
 ```
 
+## To Run
+
+1. Access the (venv) command line
+2. Execute "python secure_app/main.py
 
 # Resources:
