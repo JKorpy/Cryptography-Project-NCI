@@ -2,7 +2,6 @@ from auth.authentication import Authentication
 from db.database import Database
 
 class Login:
-
     def __init__(self):
         self.auth = Authentication()
         self.db = Database()
@@ -24,8 +23,8 @@ class Login:
 
             if self.auth.verify_password(password, stored_hash):
                  self.db.add_audit(user["userid"], "Login successful")
-                 return True, "Login successful"
+                 return True, "Login successful", user["userid"]
 
-            return False, "Invalid email or password"
+            return False, "Invalid email or password", None
                  
                     
