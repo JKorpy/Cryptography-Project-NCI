@@ -20,9 +20,10 @@ class LoginFrame(TemplateFrame):
 
     # Verify submitted login details
     def login(self):
-        ok, msg = self.logic.verify_login(self.get("email"), self.get("password"))
+        ok, msg, user_id = self.logic.verify_login(self.get("email"), self.get("password"))
         if ok:
-            self.app.show("audit")
+            self.app.user_id = user_id
+            self.app.show("cloud")
         else:
             self.reset()
             self.message(msg)

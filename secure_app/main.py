@@ -4,11 +4,13 @@ from gui import theme
 from gui.login_frame import LoginFrame
 from gui.registration_frame import RegistrationFrame
 from gui.audit_frame import AuditFrame
+from gui.cloud_frame import CloudFrame
 
 class App(ctk.CTk):
     def __init__(self):
         # Parent Window
         super().__init__(fg_color=theme.WINDOW_BG)
+        self.user_id = None
 
         # Window Properties
         self.title("Secured Cloud Storage Prototype")
@@ -20,6 +22,7 @@ class App(ctk.CTk):
             "login": LoginFrame(self),
             "register": RegistrationFrame(self),
             "audit": AuditFrame(self),
+            "cloud": CloudFrame(self),
         }
 
         # Reference the page

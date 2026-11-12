@@ -4,6 +4,10 @@
 # Cryptography
 master.key
 .master.key
+cloud_storage
+.cloud_storage
+keys/
+.keys/
 
 
 # Python
