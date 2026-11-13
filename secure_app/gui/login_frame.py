@@ -29,5 +29,4 @@ class LoginFrame(TemplateFrame):
             Add(self.db, user_id).log("Gained access to the application")
             self.app.show("cloud")
         else:
-            self.reset()
             self.message(msg)

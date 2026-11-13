@@ -25,7 +25,7 @@ class RegistrationFrame(TemplateFrame):
             self.get("email"), self.get("password"), self.get("confirm")
         )
         if ok:
-            self.app.show("register")
+            self.message(msg) 
         else:
             self.message(msg) 
         

@@ -10,7 +10,6 @@ class MyEd25519:
     def __init__(self, user):
         self.user = user
         self.keys = KEYS
-
         # Verify if the keys directory exists
         if not self.keys.is_dir():
             raise FileNotFoundError(f"Keys directory does not exist: {self.keys}")
