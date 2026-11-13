@@ -1,7 +1,6 @@
 from auth.registration import Registration
 from gui.template_frame import TemplateFrame
 
-
 class RegistrationFrame(TemplateFrame):
     def __init__(self, app):
         super().__init__(app, "Register")
@@ -18,7 +17,7 @@ class RegistrationFrame(TemplateFrame):
 
         # Action
         self.add_button("Register", self.register)
-        self.add_button("Back to login", lambda: self.app.show("login"), hidden=False)
+        self.add_button("Back to login", lambda: self.app.show("login"))
 
     # Validate submitted registration details
     def register(self):
@@ -29,7 +28,7 @@ class RegistrationFrame(TemplateFrame):
             self.app.show("register")
         else:
             self.reset()
-            self.message(msg)
+            self.message(msg) 
         
         
             

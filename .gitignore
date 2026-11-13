@@ -2,20 +2,13 @@
 # Windows: .folder/
 
 # Cryptography
-master.key
-.master.key
 cloud_storage
-.cloud_storage
 keys/
-.keys/
-
-
+audit_log.txt
 # Python
 __pycache__/
 .__pycache__/
 secure_app.egg-info/
-.secure_app.egg-info/
-
 # Virtual Environment
 .venv/
 venv/
@@ -23,6 +16,5 @@ venv/
 .vscode
 # Database
 mydata.db
-.mydata.db
 
 

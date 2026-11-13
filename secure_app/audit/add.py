@@ -1,6 +1,5 @@
 import sqlite3
-from Audit import Audit  # imports
-
+from audit.audit import Audit  # imports
 
 class Add:
     #Records and reads audit entries for one signed-in user.

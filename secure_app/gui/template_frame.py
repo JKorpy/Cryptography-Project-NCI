@@ -11,7 +11,7 @@ class TemplateFrame(ctk.CTkFrame):
     def __init__(self, app, title):
         # Initialise the parent with application as its parent window
         super().__init__(app, fg_color=theme.WINDOW_BG)
-
+        # Database
         # Reference itself
         self.app = app
         self.entries = {}
@@ -76,18 +76,8 @@ class TemplateFrame(ctk.CTkFrame):
         
 
     # Button Widget
-    def add_button(self, text, command, hidden=True):
-        # Determines whether the button should have a transparent backgroudn or not (must be unpacked)
-        if hidden:
-            style = dict(
-                fg_color=theme.BTN_BG,
-                hover_color=theme.BTN_BG_HOVER,
-            )
-        else:
-            style = dict(
-                fg_color="transparent",
-                hover_color=theme.WINDOW_BG,
-            )
+    def add_button(self, text, command):
+        # Basic Style
         ctk.CTkButton(
             self,
             text=text,
@@ -96,7 +86,8 @@ class TemplateFrame(ctk.CTkFrame):
             corner_radius=theme.BTN_RADIUS,
             text_color=theme.TEXT_PRIMARY,
             font=(theme.FONT, theme.BTN_FONT_SIZE, theme.FONT_WEIGHT),
-            **style,
+            fg_color=theme.BTN_BG,
+            hover_color=theme.BTN_BG_HOVER,
         ).pack(fill="x", padx=theme.PAD_X, pady=theme.BTN_PAD_Y) # Stretch the widget by the x-axis, create space for the x and y axis.
 
     # Text Area Widget

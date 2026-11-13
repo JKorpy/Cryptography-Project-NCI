@@ -10,14 +10,15 @@ NONCE_SIZE = 12
 BIT_LENGTH = 256
 
 class MyAESGCM:
-    def __init__(self):
+    def __init__(self, user):
+        self.user = user
         self.keys = KEYS
         # Verify the directory exists
         if not self.keys.is_dir():
             raise FileNotFoundError(f"Keys directory does not exist: {self.keys}")
 
         # Get master key and load it to AES-GCM
-        self.key_file = self.keys / "master.key"
+        self.key_file = self.keys / f"{self.user}.aes.key"
         self.aesgcm = AESGCM(self.get_master_key())
 
     def get_master_key(self):

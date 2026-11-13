@@ -1,8 +1,6 @@
 from datetime import datetime
 
 class Audit:
-  
-
     def __init__(self, userid, action, timeline=None):
         self.userid = userid
         self.action = action.strip()

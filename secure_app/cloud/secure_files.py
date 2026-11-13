@@ -19,7 +19,7 @@ class SecureFiles:
         # Access to the logged user
         self.user = Path(user).name
         # Encryptions
-        self.encryption = MyAESGCM()
+        self.encryption = MyAESGCM(self.user)
         self.signing = MyEd25519(self.user)
 
     def store_file(self, local_dir):
@@ -90,3 +90,4 @@ class SecureFiles:
         # "Download" the file to the target
         target.write_bytes(data)
         return signer_name
+
