@@ -7,6 +7,10 @@ This is a third-year team project that is meant to achieve a robust cryptography
 
 # Setup
 
+```
+git clone git@github.com:JKorpy/Cryptography-Project-NCI.git
+```
+
 ## Windows
 
 1. Create the virtual environment to store the python libraries.
@@ -24,5 +28,3 @@ deactivate
 
 1. Access the (venv) command line
 2. Execute "python secure_app/main.py
-
-# Resources:
