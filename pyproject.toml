@@ -1,3 +1,4 @@
+# https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
 # Print essential libraries (ignore pip) for the requriements.txt
 # pip list --not-required --format=freeze
 
@@ -5,6 +6,10 @@
 # pip install -e .          Base Dependencies
 # pip install -e .[dev]     Base Dependencies & Optional
 # To leave (venv), enter "deactivate"  
+
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "secure_app"
