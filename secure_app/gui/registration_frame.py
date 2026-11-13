@@ -27,7 +27,6 @@ class RegistrationFrame(TemplateFrame):
         if ok:
             self.app.show("register")
         else:
-            self.reset()
             self.message(msg) 
         
         
